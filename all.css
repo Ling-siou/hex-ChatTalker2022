@@ -562,12 +562,6 @@ p {
     z-index: 999;
 }
 
-/* @media screen and (max-width: 909px) {
-    .case-area{
-    max-width: 100%;
-    }
-} */
-
 /* moblie */
 
 @media screen and (max-width: 787px) {
