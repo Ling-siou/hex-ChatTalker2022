@@ -614,6 +614,10 @@ p {
     flex-direction: column;
 }
 
+.mobile-space-around{
+    justify-content: space-around
+}
+
 .mobile-flex-order-1{
     order: 1;
 }
