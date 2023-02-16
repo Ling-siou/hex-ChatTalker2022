@@ -142,7 +142,7 @@
                 <li class="rounded-2 shadow">
                     <div class="px-4 py-3 pointer flex text-contect-light" qs-titele="1">
                         <p class="qa-title flex-grow">我要怎麼變更方案？</p>
-                        <img src="img/icon_plus.svg"
+                        <img class="show" src="img/icon_plus.svg"
                             alt="打開的ICON">
                         <img class="hide"
                             src="img/icon_minus.svg"
@@ -155,7 +155,7 @@
                 <li class="rounded-2 shadow">
                     <div class="px-4 py-3 pointer flex text-contect-light" qs-titele="2">
                         <p class="qa-title flex-grow">如果我沒有LINE官方帳號怎麼辦？</p>
-                        <img src="img/icon_plus.svg"
+                        <img class="show" src="img/icon_plus.svg"
                             alt="打開的ICON">
                         <img class="hide"
                             src="img/icon_minus.svg"
@@ -167,14 +167,14 @@
                 </li>
                 <li class="rounded-2 shadow">
                     <div class="px-4 py-3 pointer flex text-contect-light" qs-titele="3">
-                        <p class="qa-title flex-grow text-primary">非上班日有客服支援嗎？</p>
-                        <img src="img/icon_plus.svg"
+                        <p class="qa-title flex-grow">非上班日有客服支援嗎？</p>
+                        <img class="show" src="img/icon_plus.svg"
                             alt="打開的ICON">
                         <img class="hide"
                             src="img/icon_minus.svg"
                             alt="收合的ICON">
                     </div>
-                    <div class="transition-h over-hide on" qs-content="3">
+                    <div class="transition-h over-hide" qs-content="3">
                         <p class="px-4 pt-1 pb-4 ">當然哦！我們錢都收了，不會拋棄你的！<br> 請您直接來我們公司，我們假日也都在辦公室。</p>
                     </div>
                 </li>
@@ -198,6 +198,11 @@
         // <!-- qa-test -->
         const qas = document.querySelectorAll('[qs-titele]')
         const qaContents = document.querySelectorAll('[qs-content]')
+        const toggleClasses = (ele, ...classes) => {
+            classes.forEach((c) => {
+                ele.classList.toggle(c)
+            })
+        }
         qas.forEach(qa => {
             qa.addEventListener('click', () => {
                 const qaNum = qa.getAttribute('qs-titele')
@@ -206,8 +211,8 @@
                 const qaQuestion = qa.getElementsByTagName('p')
                 const imgs = qa.getElementsByTagName('img')
                 qaQuestion[0].classList.toggle("text-primary");
-                imgs[0].classList.toggle("hide")
-                imgs[1].classList.toggle("hide")
+                toggleClasses(imgs[0], "hide", "show")
+                toggleClasses(imgs[1], "hide", "show")
             })
         })
     </script>

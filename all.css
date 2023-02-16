@@ -75,7 +75,17 @@ a{
 
 /* shape */
 .hide {
-    display: none;
+    transition: transform 0.25s ease;
+    transition-delay: 0ms;
+    width: 0px;
+    transform: rotate(90deg);
+}
+
+.show {
+    transition: transform 0.25s ease;
+    transition-delay: 0ms;
+    opacity: 1;
+    transform: rotate(0deg);
 }
 
 .display-block {
@@ -95,19 +105,19 @@ a{
 }
 
 .transition-h {
-    transition: max-height 0.75s ease;
+    transition: max-height 0.25s ease;
     transition-delay: 0ms;
     max-height: 0px;
-    /* transition-property: height;
-    transition-duration: 1s; */
+    /* transition-property: height;*/
+    /* transition-duration: 0.25s;  */
 }
 
 .transition-h.on {
     transition: max-height 0.75s ease;
     transition-delay: 0ms;
     max-height: 900px;
-    /* transition-property: height;
-    transition-duration: 1s; */
+    /* transition-property: height; 
+    transition-duration: 1s;*/
 }
 
 .over-hide {
