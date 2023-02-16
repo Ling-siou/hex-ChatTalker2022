@@ -7,8 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset200802.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="all.css">
     <title>ChatTalker</title>
+    <style>
+        .swiper {
+        width: 100%;
+        height: 300px;
+        padding-bottom: 32px;
+    }
+    .swiper-pagination-bullet-active{
+        transition: width 0.25s ease;
+        background: var(--color-star);
+        width: 15px;
+        border-radius: 10px;
+    }
+    </style>
 </head>
 
 <body>
@@ -130,86 +145,119 @@
         <!-- 好評如潮 -->
         <div class="scare block-default">
             <h2 class="mb-5 text-center">好評如潮</h2>
-            <ul class="flex scare-ul mb-35">
-                <li class="scare-card">
-                    <img class="scare-avantar"
-                        src="img/user01.jpg"
-                        alt="使用者清心寡慾設計公司頭像">
-                    <div class="card-content rounded-2 bg-w shadow px-3">
-                        <div class="card-text">原來聊天機器人可以這麼有人性！團隊非常的專業，有完整的行銷計畫提供數位整合，讓我們公司的產品用更活潑的方式讓使用者認識。</div>
-                        <div class="user-company font-blod">清心寡慾設計公司</div>
-                        <div class="flex flex-align-center">
-                            <div class="user-job flex-grow">Lina 執行長</div>
-                            <div class="scare-srar flex flex-grow flex-justify-center">
-                                <img src="img/icon_star.svg"
-                                    alt="評價星等(第一顆星)">
-                                <img src="img/icon_star.svg"
-                                    alt="評價星等(第二顆星)">
-                                <img src="img/icon_star.svg"
-                                    alt="評價星等(第三顆星)">
-                                <img src="img/icon_star.svg"
-                                    alt="評價星等(第四顆星)">
-                                <img src="img/icon_star.svg"
-                                    alt="評價星等(第五顆星)">
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="scare-card">
+                            <img class="scare-avantar"
+                                src="img/user01.jpg"
+                                alt="使用者清心寡慾設計公司頭像">
+                            <div class="card-content rounded-2 bg-w shadow px-3">
+                                <div class="card-text">原來聊天機器人可以這麼有人性！團隊非常的專業，有完整的行銷計畫提供數位整合，讓我們公司的產品用更活潑的方式讓使用者認識。</div>
+                                <div class="user-company font-blod">清心寡慾設計公司</div>
+                                <div class="flex flex-align-center">
+                                    <div class="user-job flex-grow">Lina 執行長</div>
+                                    <div class="scare-srar flex flex-grow flex-justify-center">
+                                        <img src="img/icon_star.svg"
+                                            alt="評價星等(第一顆星)">
+                                        <img src="img/icon_star.svg"
+                                            alt="評價星等(第二顆星)">
+                                        <img src="img/icon_star.svg"
+                                            alt="評價星等(第三顆星)">
+                                        <img src="img/icon_star.svg"
+                                            alt="評價星等(第四顆星)">
+                                        <img src="img/icon_star.svg"
+                                            alt="評價星等(第五顆星)">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </li>
-                <li class="scare-card mobile-hide">
-                    <img class="scare-avantar"
-                        src="img/user02.jpg"
-                        alt="使用者 subwhat 行銷公司頭像">
-                    <div class="card-content rounded-2 bg-w shadow px-3">
-                        <div class="card-text">團隊很積極的協助行銷追蹤，針對機器人進行優化，讓我們一個月內提高10000個追蹤者，客戶體驗回饋很正面！</div>
-                        <div class="user-company font-blod">subwhat 行銷公司</div>
-                        <div class="flex flex-align-center">
-                            <div class="user-job flex-grow">Zoe 活動長</div>
-                            <div class="scare-srar flex flex-grow flex-justify-center">
-                                <img src="img/icon_star.svg"
-                                    alt="評價星等(第一顆星)">
-                                <img src="img/icon_star.svg"
-                                    alt="評價星等(第二顆星)">
-                                <img src="img/icon_star.svg"
-                                    alt="評價星等(第三顆星)">
-                                <img src="img/icon_star.svg"
-                                    alt="評價星等(第四顆星)">
-                                <img src="img/icon_star.svg"
-                                    alt="評價星等(第五顆星)">
+                    <div class="swiper-slide">
+                        <div class="scare-card">
+                            <img class="scare-avantar"
+                                src="img/user02.jpg"
+                                alt="使用者 subwhat 行銷公司頭像">
+                            <div class="card-content rounded-2 bg-w shadow px-3">
+                                <div class="card-text">團隊很積極的協助行銷追蹤，針對機器人進行優化，讓我們一個月內提高10000個追蹤者，客戶體驗回饋很正面！</div>
+                                <div class="user-company font-blod">subwhat 行銷公司</div>
+                                <div class="flex flex-align-center">
+                                    <div class="user-job flex-grow">Zoe 活動長</div>
+                                    <div class="scare-srar flex flex-grow flex-justify-center">
+                                        <img src="img/icon_star.svg"
+                                            alt="評價星等(第一顆星)">
+                                        <img src="img/icon_star.svg"
+                                            alt="評價星等(第二顆星)">
+                                        <img src="img/icon_star.svg"
+                                            alt="評價星等(第三顆星)">
+                                        <img src="img/icon_star.svg"
+                                            alt="評價星等(第四顆星)">
+                                        <img src="img/icon_star.svg"
+                                            alt="評價星等(第五顆星)">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </li>
-                <li class="scare-card mobile-hide">
-                    <img class="scare-avantar"
-                        src="img/user03.jpg"
-                        alt="使用者油土伯頭像">
-                    <div class="card-content rounded-2 bg-w shadow px-3">
-                        <div class="card-text">經營了好久的IG，一直無法提升粉絲數，和團隊合作後，才知道可以用聊天機器人玩這麼豐富的行銷活動！太讚拉～</div>
-                        <div class="user-company font-blod">油土伯</div>
-                        <div class="flex flex-align-center">
-                            <div class="user-job flex-grow">HowBig</div>
-                            <div class="scare-srar flex flex-grow flex-justify-center">
-                                <img src="img/icon_star.svg"
-                                    alt="評價星等(第一顆星)">
-                                <img src="img/icon_star.svg"
-                                    alt="評價星等(第二顆星)">
-                                <img src="img/icon_star.svg"
-                                    alt="評價星等(第三顆星)">
-                                <img src="img/icon_star.svg"
-                                    alt="評價星等(第四顆星)">
-                                <img src="img/icon_star.svg"
-                                    alt="評價星等(第五顆星)">
+                    <div class="swiper-slide">
+                        <div class="scare-card">
+                            <img class="scare-avantar"
+                                src="img/user03.jpg"
+                                alt="使用者油土伯頭像">
+                            <div class="card-content rounded-2 bg-w shadow px-3">
+                                <div class="card-text">經營了好久的IG，一直無法提升粉絲數，和團隊合作後，才知道可以用聊天機器人玩這麼豐富的行銷活動！太讚拉～</div>
+                                <div class="user-company font-blod">油土伯</div>
+                                <div class="flex flex-align-center">
+                                    <div class="user-job flex-grow">HowBig</div>
+                                    <div class="scare-srar flex flex-grow flex-justify-center">
+                                        <img src="img/icon_star.svg"
+                                            alt="評價星等(第一顆星)">
+                                        <img src="img/icon_star.svg"
+                                            alt="評價星等(第二顆星)">
+                                        <img src="img/icon_star.svg"
+                                            alt="評價星等(第三顆星)">
+                                        <img src="img/icon_star.svg"
+                                            alt="評價星等(第四顆星)">
+                                        <img src="img/icon_star.svg"
+                                            alt="評價星等(第五顆星)">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </li>
-            </ul>
-            <ul class="scare-dot flex flex-justify-center">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li class="active"></li>
-            </ul>
+                    <div class="swiper-slide">
+                        <div class="scare-card">
+                            <img class="scare-avantar"
+                                src="img/user04.jpg"
+                                alt="使用者Leo頭像">
+                            <div class="card-content rounded-2 bg-w shadow px-3">
+                                <div class="card-text">自從引入聊天機器人後，跟客戶的互動有增加顯著的效率，就算可人很無理也能提供暖心的回應！</div>
+                                <div class="user-company font-blod">Leo</div>
+                                <div class="flex flex-align-center">
+                                    <div class="user-job flex-grow">社群小編</div>
+                                    <div class="scare-srar flex flex-grow flex-justify-center">
+                                        <img src="img/icon_star.svg"
+                                            alt="評價星等(第一顆星)">
+                                        <img src="img/icon_star.svg"
+                                            alt="評價星等(第二顆星)">
+                                        <img src="img/icon_star.svg"
+                                            alt="評價星等(第三顆星)">
+                                        <img src="img/icon_star.svg"
+                                            alt="評價星等(第四顆星)">
+                                        <img src="img/icon_star.svg"
+                                            alt="評價星等(第五顆星)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
     </div>
     <div class="footer flex flex-column flex-align-center mb-block flex flex-column">
@@ -221,6 +269,24 @@
     <div class="web-right text-center">
         <p>© 2022 chatTalker. All Rights Reserved.</p>
     </div>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            spaceBetween: 15,
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+
+            slidesPerView: 1,
+            breakpoints: {
+                787: {
+                    slidesPerView: 3
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
